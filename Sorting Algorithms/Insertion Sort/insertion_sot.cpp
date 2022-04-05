@@ -5,17 +5,17 @@ using namespace std;
 void insertionSort(int array[], int size)
 {
 	int key, j;
-	for (int i = 1; i < size; i++)
+	for (int i = 1; i < size; i++) // sorted = ar[0]       unsoted = ar[ 1 to size-1 ]
 	{
-		key = array[i];
-		j = i - 1;
+		key = array[i]; // current index 6
+		j = i - 1;		// index i -1 or previous 7
 
-		while (j >= 0 && array[j] > key)
+		while (j >= 0 && array[j] > key) // only j can handle the index
 		{
-			array[j + 1] = array[j];
-			j = j - 1;
+			array[j + 1] = array[j]; // arr[i] = 7
+			j = j - 1;				 // j = i -2
 		}
-		array[j + 1] = key;
+		array[j + 1] = key; // for while loop does previous j is decreased by 1 and adding one give j    [  Not-while loop -> doesn't change its value  ]
 	}
 }
 

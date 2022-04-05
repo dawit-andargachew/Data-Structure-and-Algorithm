@@ -12,18 +12,18 @@ void swapper(int *value_1, int *value_2)
 // Function to sort an array using bubble sort
 int *selection_sort(int array[], int size)
 {
-    int mid;
-    for (int i = 0; i < size - 1; i++)
+    int mid_index;
+    for (int i = 0; i < size - 1; i++) // i = 0 ; i <= size -2 ; i ++
     {
 
-        mid = i;
-        for (int j = i + 1; j < size; j++)
+        mid_index = i;  //  <-- extension of simple sort
+        for (int j = i + 1; j < size; j++) // j = i + 1; j <= size -1 ; j ++
         {
             if (array[i] > array[j])
             {
-                mid = j;
+                mid_index = j; // <-- 
 
-                if (i != mid)
+                if (i != mid_index)
                     swapper(&array[j], &array[i]);
             }
         }

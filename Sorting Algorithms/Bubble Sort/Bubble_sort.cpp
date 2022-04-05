@@ -21,7 +21,6 @@ int *bubble_sort(int array[], int size)
   return array;
 }
 
-
 int main()
 {
   // sample data to check the algorithm

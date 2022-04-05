@@ -13,9 +13,9 @@ void swapper(int *value_1, int *value_2)
 int *simple_sort(int array[], int size)
 {
     int temp;
-    for (int i = 0; i <= size - 2; i++)
+    for (int i = 0; i <= size - 2; i++) // i = 0 ; i < size -1 ; i ++
     {
-        for (int j = i + 1; j <= size - 1; j++)
+        for (int j = i + 1; j <= size - 1; j++)  // j = i + 1; j < size ; j ++
         {
             if (array[i] > array[j])
                 swapper(&array[i], &array[j]);
